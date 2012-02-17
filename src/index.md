@@ -23,3 +23,4 @@ I use node.js to serve up my outputted HTML, as Firefox's LiveReload plugin has 
 # src folder
 
 Any file structure you use within `src` will be reflected in the `output` directory.
+
