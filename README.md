@@ -1,9 +1,9 @@
 Pandoc Guard
 ============
 
-Pandoc project set up with guard.
+Pandoc project set up with [`guard`](https://github.com/guard/guard).
 
-It will automatically output files on save using `guard-shell` and then reload the browser with `guard-livereload`.
+It will automatically output files on save using [`guard-shell`](https://github.com/guard/guard-shell) and then reload the browser with [`guard-livereload`](https://github.com/guard/guard-livereload).
 
 Default output setting is HTML and ODT.
 
