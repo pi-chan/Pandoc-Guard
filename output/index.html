@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Pandoc Guard </title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="/">Pandoc Guard</a>
+      </div>
+    </div>
+  </div>
+  <div id="TOC" class="sidebar span4">
+    <h2 id="heading">Table of Contents</h2>
+    <ul>
+    <li><a href="#pandoc-guard">Pandoc Guard</a></li>
+    <li><a href="#a-note-on-livereload">A note on livereload</a></li>
+    <li><a href="#src-folder">src folder</a></li>
+    </ul>
+  </div>
+  <div id="content" class="content">
+                  <h1 id="pandoc-guard"><a href="#TOC">Pandoc Guard</a></h1>
+                  <p>Pandoc project set up with guard.</p>
+                  <p>It will automatically output files on save using <code>guard-shell</code> and then reload the browser with <code>guard-livereload</code>.</p>
+                  <p>Default output setting is HTML and ODT.</p>
+                  <p>HTML output uses Twitter Bootstrap for styling, along with some tweaks.</p>
+                  <h1 id="a-note-on-livereload"><a href="#TOC">A note on livereload</a></h1>
+                  <p>I use node.js to serve up my outputted HTML, as Firefox's LiveReload plugin has issues with the <code>file://</code> protocol.</p>
+                  <ol type="1">
+                  <li>Run <code>node static_server.js</code></li>
+                  <li>Navigate to <code>localhost:10000</code></li>
+                  <li>Run <code>guard</code> from the project root</li>
+                  <li>Activate the plugin from your browser</li>
+                  <li>Check that your terminal says 'Browser connected'</li>
+                  <li>Iterate over your document!</li>
+                  </ol>
+                  <h1 id="src-folder"><a href="#TOC">src folder</a></h1>
+                  <p>Any file structure you use within <code>src</code> will be reflected in the <code>output</code> directory.</p>
+        </div>
+</body>
+</html>
