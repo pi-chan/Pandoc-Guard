@@ -18,7 +18,7 @@ I use node.js to serve up my outputted HTML, as Firefox's LiveReload plugin has 
 3. Run `guard` from the project root
 4. Activate the plugin from your browser
 5. Check that your terminal says 'Browser connected'
-6. Iterate over your document!
+6. Create a file inside the `src` directory and iterate over your document!
 
 # src folder
 
