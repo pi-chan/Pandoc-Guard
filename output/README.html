@@ -16,28 +16,35 @@
     <h2 id="heading">Table of Contents</h2>
     <ul>
     <li><a href="#pandoc-guard">Pandoc Guard</a></li>
-    <li><a href="#a-note-on-livereload">A note on livereload</a></li>
-    <li><a href="#src-folder">src folder</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#initial-settings">Initial Settings</a></li>
+    <li><a href="#run">Run</a></li>
+    <li><a href="#how-to-use">How to Use</a></li>
     </ul>
   </div>
   <div id="content" class="content">
                   <h1 id="pandoc-guard"><a href="#pandoc-guard">Pandoc Guard</a></h1>
-<p>Pandoc project set up with <a href="https://github.com/guard/guard"><code>guard</code></a>.</p>
-<p>It will automatically output files on save using <a href="https://github.com/guard/guard-shell"><code>guard-shell</code></a> and then reload the browser with <a href="https://github.com/guard/guard-livereload"><code>guard-livereload</code></a>.</p>
-<p>Default output setting is HTML and ODT.</p>
-<p>HTML output uses Twitter Bootstrap for styling, along with some tweaks.</p>
-<h1 id="a-note-on-livereload"><a href="#a-note-on-livereload">A note on livereload</a></h1>
-<p>I use node.js to serve up my outputted HTML, as Firefox's LiveReload plugin has issues with the <code>file://</code> protocol.</p>
+<p>forked from <a href="https://github.com/aaronmcadam/Pandoc-Guard">aaronmcadam/Pandoc-Guard</a>.</p>
+<h1 id="prerequisites"><a href="#prerequisites">Prerequisites</a></h1>
+<ul>
+<li>pandoc <a href="http://johnmacfarlane.net/pandoc/">Pandoc - About pandoc</a></li>
+<li>ruby and bundler</li>
+<li>node and npm</li>
+<li>livereload extension for your browser.</li>
+</ul>
+<h1 id="initial-settings"><a href="#initial-settings">Initial Settings</a></h1>
 <ol type="1">
-<li>Run <code>node static_server.js</code></li>
-<li>Navigate to <code>localhost:10000</code></li>
-<li>Run <code>guard</code> from the project root</li>
-<li>Activate the plugin from your browser</li>
-<li>Check that your terminal says 'Browser connected'</li>
-<li>Create a file inside the <code>src</code> directory and iterate over your document!</li>
+<li><code>$ bundle install</code> or <code>$ bundle install --path .bundle</code></li>
+<li><code>$ npm install</code></li>
 </ol>
-<h1 id="src-folder"><a href="#src-folder">src folder</a></h1>
-<p>Any file structure you use within <code>src</code> will be reflected in the <code>output</code> directory.</p>
+<h1 id="run"><a href="#run">Run</a></h1>
+<ol type="1">
+<li><code>$ node static_server.js</code></li>
+<li><code>$ guard</code> or <code>$ bundle exec guard</code></li>
+</ol>
+<h1 id="how-to-use"><a href="#how-to-use">How to Use</a></h1>
+<p>Put markdown files into <code>src</code> dir as <code>*.md</code>, then <code>html</code> files are generated automatically.</p>
+<p>And you cannot convert <code>src/index.md</code> to <code>output/index.html</code>, because <code>output/index.html</code> is reserved for this program. <code>output/index.html</code> lists all html files under the <code>output</code> directory,</p>
         </div>
 </body>
 </html>

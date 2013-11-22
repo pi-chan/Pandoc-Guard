@@ -1,26 +1,29 @@
 Pandoc Guard
 ============
 
-Pandoc project set up with [`guard`](https://github.com/guard/guard).
+forked from [aaronmcadam/Pandoc-Guard](https://github.com/aaronmcadam/Pandoc-Guard).
 
-It will automatically output files on save using [`guard-shell`](https://github.com/guard/guard-shell) and then reload the browser with [`guard-livereload`](https://github.com/guard/guard-livereload).
+# Prerequisites
 
-Default output setting is HTML and ODT.
+- pandoc [Pandoc - About pandoc](http://johnmacfarlane.net/pandoc/)
+- ruby and bundler
+- node and npm
+- livereload extension for your browser.
 
-HTML output uses Twitter Bootstrap for styling, along with some tweaks.
+# Initial Settings
 
-# A note on livereload
+1. `$ bundle install` or `$ bundle install --path .bundle`
+1. `$ npm install`
 
-I use node.js to serve up my outputted HTML, as Firefox's LiveReload plugin has issues with the `file://` protocol. 
+# Run
 
-1. Run `node static_server.js`
-2. Navigate to `localhost:10000`
-3. Run `guard` from the project root
-4. Activate the plugin from your browser
-5. Check that your terminal says 'Browser connected'
-6. Create a file inside the `src` directory and iterate over your document!
+1. `$ node static_server.js`
+1. `$ guard` or `$ bundle exec guard`
 
-# src folder
+# How to Use
 
-Any file structure you use within `src` will be reflected in the `output` directory.
+Put markdown files into `src` dir as `*.md`, then `html` files are generated automatically.
+
+And you cannot convert `src/index.md` to `output/index.html`, because `output/index.html` is reserved for this program. `output/index.html` lists all html files under the `output` directory, 
+
 
