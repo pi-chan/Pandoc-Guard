@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'guard'
-gem 'guard-shell'
-gem 'guard-livereload'
-
+gem 'guard', require:false
+gem 'guard-shell', require:false
+gem 'guard-livereload', require:false
 
