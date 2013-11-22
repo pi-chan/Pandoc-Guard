@@ -9,33 +9,16 @@ $endfor$
 $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
-  <title>Pandoc Guard $if(title-prefix)$$title-prefix$ - $endif$$if(pagetitle)$$pagetitle$$endif$</title>
+  <title>Pandoc Guard</title>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-$if(highlighting-css)$
-$highlighting-css$
-$endif$
-$for(css)$
-  <link rel="stylesheet" href="$css$">
-$endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
-  $header-includes$
-$endfor$
+  <link rel="stylesheet" href="/css/github.css">
 </head>
 <body>
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="/">Pandoc Guard</a>
-      </div>
-    </div>
-  </div>
-  <div id="$idprefix$TOC" class="sidebar span4">
+  <a href="/">Index</a>
+  
+  <div id="$idprefix$TOC">
     <h2 id="heading">Table of Contents</h2>
     $toc$
   </div>

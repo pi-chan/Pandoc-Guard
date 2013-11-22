@@ -1,0 +1,7 @@
+{
+    "name": "pandoc-guard",
+    "version": "1.0.0",
+    "dependencies": {
+	"connect": ">= 0.0.0"
+    }
+}
