@@ -1,7 +1,7 @@
 # compile markdown files to html and odt
 guard 'shell' do
   # build with pandoc
-  watch(/src\/(.*)\.md$/) do |m|
+  watch(/.*src\/(.*)\.md$/) do |m|
     # m[0] = relative file path and file name with extension
     # m[1] = relative matched file path and file name without extension
     `mkdir -p output/#{m[1][0,m[1].rindex('/')]}`  if m[1].rindex('/')
